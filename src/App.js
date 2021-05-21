@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+const marked = require("marked")
 
 function App() {
+
+  const [text, setText] = useState('')
+  
+  const handleChange = (e) => {
+    setText(e.target.value)
+  }
+
+  let markdown = marked(text)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="editor-div">
+        <textarea
+          className="editor"
+          id="editor"
+          onChange={(e) => handleChange(e)}
+          placeholder="Enter markdown here..."
+        ></textarea>
+      </div>
+      <div className="preview-div">
+        <div
+          className="preview"
+          type="text"
+          dangerouslySetInnerHTML={{ __html: markdown }}
+          readOnly
+        ></div>
+      </div>
     </div>
   );
 }
