@@ -5,30 +5,57 @@
 }
 
 .App{
-    border: green solid 1px;
-    height: 100vh;
-    background-color: rgb(62, 62, 116);
+    border: rgb(241, 245, 9) solid 3px;
+    min-height: 100vh;
+    background-color: rgb(68, 52, 83);
+}
+
+header{
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    border: rgb(96, 245, 9) solid 3px;
+}
+
+.main{
+    display: flex;
+    height: 90vh;
 }
 
 .editor-div{
     border: red solid 1px;
-    height: 40vh;
+    width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: flex-start;
+}
+
+.header-editor{
+    border: yellow solid 1px;
 }
 
 .editor{
     height: 80%;
     width: 80%;
+    overflow: auto;
+    align-self: center;
+    padding: 1rem;
 }
 
 .preview-div{
     border: white solid 1px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 50%;
+}
+
+.header-preview{
+    border: yellow solid 1px;
 }
 
 .preview{
@@ -36,4 +63,14 @@
     height: 80%;
     padding: 0;
     background-color: white;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow: auto;
+    align-self: center;
+    padding: 1rem;
+}
+
+li{
+    margin-left: 20px;
 }
