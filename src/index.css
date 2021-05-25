@@ -1,13 +1,14 @@
-*{
+body{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 .App{
-    border: rgb(241, 245, 9) solid 3px;
+    /* border: rgb(241, 245, 9) solid 3px; */
     min-height: 100vh;
     background-color: rgb(68, 52, 83);
+    padding: 0;
+    margin: 0;
 }
 
 header{
@@ -16,7 +17,7 @@ header{
     justify-content: center;
     align-items: center;
     color: whitesmoke;
-    border: rgb(96, 245, 9) solid 3px;
+    /* border: rgb(96, 245, 9) solid 3px; */
 }
 
 .main{
@@ -25,7 +26,7 @@ header{
 }
 
 .editor-div{
-    border: red solid 1px;
+    /* border: red solid 1px; */
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -33,9 +34,9 @@ header{
     justify-content: flex-start;
 }
 
-.header-editor{
+/* .header-editor{
     border: yellow solid 1px;
-}
+} */
 
 .editor{
     height: 80%;
@@ -46,7 +47,7 @@ header{
 }
 
 .preview-div{
-    border: white solid 1px;
+    /* border: white solid 1px; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -54,17 +55,15 @@ header{
     width: 50%;
 }
 
-.header-preview{
+/* .header-preview{
     border: yellow solid 1px;
-}
+} */
 
 .preview{
     width: 80%;
     height: 80%;
-    padding: 0;
     background-color: white;
     word-wrap: break-word;
-    white-space: pre-wrap;
     word-break: break-word;
     overflow: auto;
     align-self: center;

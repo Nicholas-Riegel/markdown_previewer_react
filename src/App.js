@@ -1,7 +1,43 @@
 import { useState, useEffect} from 'react'
 const marked = require("marked")
 
-const initialText = "# Header \n## Subheader \n### Sub-subheader \n\nIn-line code, `<div></div>`, between 2 backticks. \n\n``` \n// this is a code block: \nfunction anotherExample(firstLine, lastLine) { \n  if (firstLine == '```' && lastLine == '```') {\n     return multiLineCode;\n  }\n}\n```\n\nYou can also make text **bold**... whoa!\nOr _italic_.\nOr... wait for it... **_both!_**\nAnd feel free to go crazy ~~crossing stuff out~~.\nThere's also [links](https://www.freecodecamp.com), and\n> Block Quotes!\n\n- And of course there are lists.\n  - Some are bulleted.\n    - With different indentation levels.\n      - That look like this.\n1. And there are numbered lists too.\n1. Use just 1s if you want!\n1. And last but not least, let's not forget embedded images:\n\n![React Logo w/ Text](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ZmV_XcNHA9rOtiy4DPL31AAAAA%26pid%3DApi&f=1)"
+marked.setOptions({breaks: true})
+
+const initialText = `# Welcome to my React Markdown Previewer!
+
+## This is a sub-heading...
+### And here's some other cool stuff:
+
+Heres some code, \`<div></div>\`, between 2 backticks.
+
+\`\`\`
+// this is multi-line code:
+
+function anotherExample(firstLine, lastLine) {
+  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
+    return multiLineCode;
+  }
+}
+\`\`\`
+
+You can also make text **bold**... whoa!
+Or _italic_.
+Or... wait for it... **_both!_**
+And feel free to go crazy ~~crossing stuff out~~.
+
+There's also [links](https://www.freecodecamp.com), and
+> Block Quotes!
+
+- And of course there are lists.
+  - Some are bulleted.
+     - With different indentation levels.
+        - That look like this.
+
+
+1. And there are numbererd lists too.
+1. Use just 1s if you want!
+1. And last but not least, let's not forget embedded images:
+![React Logo w/ Text](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ZmV_XcNHA9rOtiy4DPL31AAAAA%26pid%3DApi&f=1)`
 
 function App() {
 
@@ -18,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <header className="header-top">
-        <h2>Markdown Previewer</h2>
+        <h1>Markdown Previewer</h1>
       </header>
       <div className="main">
         <div className="editor-div">
